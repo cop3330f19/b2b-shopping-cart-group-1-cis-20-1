@@ -12,11 +12,11 @@ class Product{
     int stockQuantity;
     
     Product();
-    Product(int, std::string, double, int)
-   int getItemNo();
-   std::string getDescription();
-    double getPrice();
-    int getStockQuantity();
+    Product(int, std::string, double, int);
+   int getItemNo(){};
+   std::string getDescription(){};
+    double getPrice(){};
+    int getStockQuantity(){};
     void setItemNo(int){};
     void setDescription(std::string){};
    void setPrice(double){};
