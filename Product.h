@@ -17,8 +17,8 @@ class Product{
    std::string getDescription();
     double getPrice();
     int getStockQuantity();
-    void setItemNo(int);
-    void setDescription(std::string);
-   void setPrice(double);
-    void setStockQuantity(int);
+    void setItemNo(int){};
+    void setDescription(std::string){};
+   void setPrice(double){};
+    void setStockQuantity(int){};
 };
