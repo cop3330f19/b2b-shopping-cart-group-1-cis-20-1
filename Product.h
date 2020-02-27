@@ -7,18 +7,18 @@ class Product{
   public:
     
     int itemNo;
-    std::string description;
-    double price;
+    std::string Description;
+    double Price;
     int stockQuantity;
     
     Product();
     Product(int, std::string, double, int);
-   int getItemNo(){};
+   int getitemNo(){};
    std::string getDescription(){};
     double getPrice(){};
-    int getStockQuantity(){};
-    void setItemNo(int){};
+    int getstockQuantity(){};
+    void setitemNo(int){};
     void setDescription(std::string){};
    void setPrice(double){};
-    void setStockQuantity(int){};
+    void setstockQuantity(int){};
 };
