@@ -3,30 +3,33 @@
 2/28/2020
 	  \*
 
-#include <iomanip>
 #include <string>
-#include <iostream>
-using namespace std;
+#include <sstream>
 
-class Product{
-  
- private:
-    int itemNo;
-    std::string Description;
-    double Price;
-    int stockQuantity;
-  
- public:
-    
-    Product();
-    Product(int, std::string, double, int);
-    int getitemNo(){};
-    std::string getDescription(){};
-    double getPrice(){};
-    int getstockQuantity(){};
-    void setitemNo(int){};
-    void setDescription(std::string){};
-    void setPrice(double){};
-    void setstockQuantity(int){};
-    void print();
-};
+#ifndef PRODUCT_H
+#define PRODUCT_H
+
+class Product
+{
+public:
+	Product(int item_num, std::string item_des, double item_price, int item_stock);
+	void setProductNum(int);
+	void setProductDes(std::string);
+	void setProductPrice(double);
+	void setProductStock(int);
+
+	int getProductNum();
+	std::string getProductDes();
+	double getProductPrice();
+	int getProductStock();
+	
+
+private:
+	int itemNo;
+	std::string description;
+	double price;
+	int stockQuantity;
+
+}; // end class Customer
+
+#endif CUSTOMER_H
