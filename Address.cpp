@@ -53,3 +53,7 @@ string Address::getZipCode()
 {
 	return zipCode;
 }
+void Address:: print()
+{
+    cout << city << ", " << state << " " << zipCode;
+}
