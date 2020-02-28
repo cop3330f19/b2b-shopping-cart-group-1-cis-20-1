@@ -23,4 +23,5 @@ class Product{
     void setDescription(std::string){};
     void setPrice(double){};
     void setstockQuantity(int){};
+    void print();
 };
