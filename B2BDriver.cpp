@@ -8,6 +8,15 @@
 #include<iostream>
 
 using namespace std;
+string generateOrderNum(){
+
+time_t now = time(0);
+    string oNum;
+    stringstream strstream;
+    strstream << now;
+    strstream >> oNum;
+    return oNum;
+};
 
 //Structures
 struct Address				//Holds Customer Address
@@ -20,10 +29,10 @@ struct Address				//Holds Customer Address
 
 struct Customer				//Holds Customer Info.
 {
-	string customerNum;
-	string customerName;
-	double lineOfCredit;
-	Address *corporateAddress
+	string CustomerNum;
+	string CustomerName;
+	double LineOfCredit;
+	Address *corporateAddress;
 };
 
 struct Product				//Holds Product Data
@@ -70,7 +79,7 @@ int main()
 
 	//Openinhg files and reading in the data
 	CustomerDataInput(customerData, CustList, AddList, Length);
-	inventoryDataInput(inventoryData, ProdList, Length);
+	InventoryDataInput(inventoryData, ProdList, Length);
 
 
 	return 0;
@@ -91,7 +100,7 @@ vector <string> parase(string line, char delimiter)
 	return parsedLine;
 }
 
-void CustomerDataInput(string file, customer CustList[], vector<Address>&AddList, int Length)
+void CustomerDataInput(string file, Customer CustList[], vector<Address>&AddList, int Length)
 {
 	//Temp. strings & vectors 
 	vector <string> tempCust;
@@ -103,22 +112,26 @@ void CustomerDataInput(string file, customer CustList[], vector<Address>&AddList
 	ifstream filename;
 	filename.open(file.c_str()); //string is passed here
 
-	if (Filename.is_open())
+	if (filename.is_open())
 	{
-		while (getline(Filename, str))
+		while (getline(filename, str))
 		{
 			tempCust = parse(str, '|');
-			CustList[i].customerNum = tempCust[0];
-			CustList[i].customerName = tempCust[1];
-			CustList[i].lineOfCredit = atof(tempCust[2].c_str()); // Converting string to double
+			CustList[i].CustomerNum = tempCust[0];
+			CustList[i].CustomerName = tempCust[1];
+			CustList[i].LineOfCredit = atof(tempCust[2].c_str()); // Converting string to double
 			tempSTR = tempCust[3];
 
 			tempAdd = parse(tempSTR, ',');			//vector of addresses parsed by the comma
 			AddList.push_back(Address());
-			Addlist[i].streetAddress = tempAdd[0];
-			Addlist[i].city = tempAdd[1];
-			Addlist[i].state = tempAdd[2];
-			Addlist[i].zipCode = tempAdd[3];
+			AddList[i].streetAddress = tempAdd[0];
+			AddList[i].city = tempAdd[1];
+			AddList[i].state = tempAdd[2];
+			AddList[i].zipCode = tempAdd[3];
 			i++;									//increments to fill vector/array
 
 		}
+    }
+}
+    
+
