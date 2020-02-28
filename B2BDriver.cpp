@@ -25,7 +25,7 @@ time_t now = time(0);
 
 //Structures
 struct Address				//Holds Customer Address
-{ 
+{  
 	string streetAddress; 
 	string city; 
 	string state;
