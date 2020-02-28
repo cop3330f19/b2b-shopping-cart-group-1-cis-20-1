@@ -11,7 +11,8 @@ public:
 	void setCity(std::string);
 	void setState(std::string);
 	void setZipCode(std::string);
-
+        void print();
+		
 	std::string getStreetAddress();
 	std::string getCity();
 	std::string getState();
