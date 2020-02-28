@@ -53,3 +53,9 @@ string Customer::getCorporateAddress()
 {
 	return *corporateAddress;
 }
+void Customer::print()
+{
+    cout << "Customer Number: " << CustomerNum << endl;
+    cout << "Customer: " << CustomerName << endl;
+    cout << "Address: " << *corporateAddress << " |" << endl; 
+}
