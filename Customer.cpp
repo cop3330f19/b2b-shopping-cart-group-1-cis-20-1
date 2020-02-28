@@ -1,4 +1,7 @@
-#include <iostream>
+*/Customer.cpp
+  Group 1 : Rhiana L. ,Chris W., Mario B., Elijah D.
+2/28/2020
+	  \*#include <iostream>
 #include <sstream>
 #include <string>
 #include "Customer.h"
