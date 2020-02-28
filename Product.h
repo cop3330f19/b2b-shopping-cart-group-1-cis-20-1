@@ -4,21 +4,23 @@
 using namespace std;
 
 class Product{
-  public:
-    
+  
+ private:
     int itemNo;
     std::string Description;
     double Price;
     int stockQuantity;
+  
+ public:
     
     Product();
     Product(int, std::string, double, int);
-   int getitemNo(){};
-   std::string getDescription(){};
+    int getitemNo(){};
+    std::string getDescription(){};
     double getPrice(){};
     int getstockQuantity(){};
     void setitemNo(int){};
     void setDescription(std::string){};
-   void setPrice(double){};
+    void setPrice(double){};
     void setstockQuantity(int){};
 };
