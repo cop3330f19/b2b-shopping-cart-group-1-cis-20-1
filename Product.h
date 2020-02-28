@@ -1,3 +1,8 @@
+*/Product.h
+  Group 1 : Rhiana L. ,Chris W., Mario B., Elijah D.
+2/28/2020
+	  \*
+
 #include <iomanip>
 #include <string>
 #include <iostream>
